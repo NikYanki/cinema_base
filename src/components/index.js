@@ -1,10 +1,16 @@
+export * from "./Genres/Genres";
+export * from "./GenresBadges/GenresBadges";
+export * from "./Header/Header";
+export * from "./Layout/Layout";
+export * from "./Loader/Loader";
+export * from "./MoviesByGenre/MoviesByGenre";
+export * from "./MoviesComponents/Movie/Movie";
+export * from "./MoviesComponents/MovieDetails/MovieDetails";
+export * from "./MoviesComponents/Movies/Movies";
+export * from "./Pagination/Pagination/Pagination";
+export * from "./Pagination/PaginationButton/PaginationButton";
 export * from "./Rating/Rating";
+export * from "./SearcComponents/SearchFilms/SearchFilms";
+export * from "./SearcComponents/SearchResults/SearchResults";
+export * from "./Slider/MovieSlider";
 export * from "./ThemeToggle/ThemeToggle";
-export * from "./moviesComponents/Movies/Movies";
-export * from "./moviesComponents/Movie/Movie";
-export * from "./Genres/Genr";
-
-
-
-
-

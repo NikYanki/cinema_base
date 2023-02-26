@@ -1,12 +1,15 @@
+import "./MovieDetails.css"
+
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {useParams} from "react-router-dom";
-import {movieDetailsActions} from "../../../redux/slices/movieDetailsSlice/movieDetailsSlice";
-import "./MovieDetails.css"
+
+import {movieDetailsActions} from "../../../redux/slices";
 import {Rating} from "../../Rating/Rating";
 import {GenresBadges} from "../../GenresBadges/GenresBadges";
 
 const MovieDetails = () => {
+
     const {id} = useParams()
     const {movie} = useSelector(state => state.movie)
     const dispatch = useDispatch()
@@ -65,4 +68,4 @@ const MovieDetails = () => {
     );
 };
 
-export {MovieDetails}
+export {MovieDetails};

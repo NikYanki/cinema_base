@@ -1,11 +1,13 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+
 import {moviesService} from "../../../services";
 
 const initialState = {
     movie: null,
     errors: null,
     loading: false
-}
+};
+
 const getMovieById = createAsyncThunk("movieDetailsSlice/getMovieById",
     async ({id}, {rejectWithValue}) => {
         try {
@@ -14,7 +16,7 @@ const getMovieById = createAsyncThunk("movieDetailsSlice/getMovieById",
         } catch (e) {
             return rejectWithValue(e.response.data)
         }
-    })
+    });
 
 const movieDetailsSlice = createSlice({
     name: "movieDetailsSlice",
@@ -33,14 +35,14 @@ const movieDetailsSlice = createSlice({
             state.loading = true
         })
 
-})
+});
 
 const {reducer: movieDetailsReducer} = movieDetailsSlice
 const movieDetailsActions = {
     getMovieById
-}
+};
 
 export {
     movieDetailsActions,
     movieDetailsReducer
-}
+};

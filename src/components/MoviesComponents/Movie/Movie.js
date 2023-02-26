@@ -1,12 +1,11 @@
 import './Movie.css';
-import {Rating} from "../../Rating/Rating";
+
 import {Link} from "react-router-dom";
 
-const Movie = ({movie}) => {
-    const {
-        backdrop_path, genre_ids, original_title, overview, poster_path, release_date, title, vote_average
-    } = movie;
+import {Rating} from "../../Rating/Rating";
 
+const Movie = ({movie}) => {
+    const {original_title, poster_path, title, vote_average} = movie;
 
     return (
         <div className='movieCardContainer'>

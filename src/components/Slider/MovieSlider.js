@@ -1,17 +1,20 @@
-import React, {Component, useEffect} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import {Carousel} from 'react-responsive-carousel';
-import {useDispatch, useSelector} from "react-redux";
-import {topRatedMoviesActions} from "../../redux/slices/topRatedMovieSlice/topRatedMoviesSlice";
 import "./Slider.css"
+
+import {useEffect} from "react";
+import {Carousel} from "react-responsive-carousel";
+import {useDispatch, useSelector} from "react-redux";
 import {Link} from "react-router-dom";
+
+import {topRatedMoviesActions} from "../../redux/slices";
 
 const MovieSlider = () => {
     const dispatch = useDispatch()
     const {topRatedMovies} = useSelector(state => state.topRatedMovies)
     useEffect(() => {
         dispatch(topRatedMoviesActions.getAll())
-    }, [dispatch])
+    }, [dispatch]);
+
     return (<div className="carouselContainer">
             <Carousel>
                 {topRatedMovies && topRatedMovies.map(movie => <div key={movie.id}>
@@ -22,4 +25,4 @@ const MovieSlider = () => {
         </div>
     )
 }
-export {MovieSlider}
+export {MovieSlider};

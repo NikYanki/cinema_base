@@ -1,7 +1,6 @@
-import React from 'react';
-import {MovieDetails} from "../../components/moviesComponents/MovieDetails/MovieDetails";
-import {Header} from "../../components/Header/Header";
 import {useSelector} from "react-redux";
+
+import {Header, MovieDetails} from "../../components";
 
 const MovieDetailsPage = () => {
     const {darkMode} = useSelector(state => state.theme);
@@ -13,4 +12,5 @@ const MovieDetailsPage = () => {
         </div>
     );
 };
-export {MovieDetailsPage}
+
+export {MovieDetailsPage};

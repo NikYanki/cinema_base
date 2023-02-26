@@ -1,9 +1,10 @@
-import React from 'react';
-import logo from '../../logo/logo.png'
-import {ThemeToggle} from "../ThemeToggle/ThemeToggle";
 import './Header.css'
+
+import logo from '../../logo/logo.png'
+
 import {useNavigate} from "react-router-dom";
-import {SearchFilms} from "../searcComponents/SearchFilms/SearchFilms";
+
+import {ThemeToggle} from "../ThemeToggle/ThemeToggle";
 
 const Header = () => {
     const navigate = useNavigate()
@@ -16,7 +17,7 @@ const Header = () => {
                     <button onClick={() => {navigate("/home")}}>Home</button>
                     <button onClick={() => {navigate("/moviesList")}}>All movies</button>
                     <button onClick={() => {navigate("/genres")}}>Genres</button>
-                    <button>My profile</button>
+                    <button onClick={() => {navigate("/myProfile")}}>My profile</button>
                 </div>
             </div>
 

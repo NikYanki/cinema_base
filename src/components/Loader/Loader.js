@@ -18,4 +18,4 @@ const Loader = () => {
     );
 };
 
-export {Loader}
+export {Loader};

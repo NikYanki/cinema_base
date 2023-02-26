@@ -14,7 +14,7 @@ const themeToggleSlice = createSlice({
     }
 });
 
-const {reducer: themeReducer, actions:{changeTheme}}=themeToggleSlice
+const {reducer: themeReducer, actions:{changeTheme}}=themeToggleSlice;
 
 export {
     themeReducer,

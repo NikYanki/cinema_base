@@ -2,7 +2,8 @@ import React from 'react';
 import StarRatings from "react-star-ratings/build/star-ratings";
 
 const Rating = ({grade}) => {
-    const color = ['#f3d661', '#100f0f', '#757679']
+    const color = ['#f3d661', '#100f0f', '#757679'];
+
     return (
         <div>
             <StarRatings numberOfStars={5}
@@ -17,4 +18,4 @@ const Rating = ({grade}) => {
     );
 };
 
-export {Rating}
+export {Rating};

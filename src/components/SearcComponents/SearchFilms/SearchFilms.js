@@ -1,7 +1,10 @@
-import React, {useEffect} from 'react';
+import "./SearchFilms.css"
+
 import {useDispatch} from "react-redux";
+import {useEffect} from "react";
 import {useForm} from "react-hook-form";
-import {searchActions} from "../../../redux/slices/searchFilmSlice/searchFilmSlice";
+
+import {searchActions} from "../../../redux/slices";
 
 
 const SearchFilms = () => {
@@ -12,11 +15,12 @@ const SearchFilms = () => {
             const result=dispatch(searchActions.getMoviesBySearch({search}))
         });
     }, [watch]);
+
     return (
-        <div>
+        <div className="searchFilms">
             <input type="text" placeholder={'🔎    Search movie   '} {...register('search')}/>
         </div>
     );
 };
 
-export {SearchFilms}
+export {SearchFilms};

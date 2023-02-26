@@ -5,13 +5,15 @@ import Badge from "react-simple-badges";
 
 const GenresBadges = ({genres}) => {
     return (
+
         <div>{genres.map(({name, id}) => {
-            return <Link to={'/genres/' + id} key={id}>
-                <Badge name={name}
-                       style={{color: 'white'}}
-                       backgroundColor={`${randomColor()}`}/>
-            </Link>
-        })}
+
+                return <Link to={'/genres/' + id} key={id}>
+                    <Badge name={name}
+                           backgroundColor={`${randomColor()}`}/>
+                </Link>
+            }
+        )};
         </div>
     );
 };

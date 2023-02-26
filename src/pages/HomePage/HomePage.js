@@ -1,12 +1,14 @@
-import React from 'react';
-import {Layout} from "../../components/Layout/Layout";
+import {useSelector} from "react-redux";
+
+import {Layout} from "../../components";
 
 const HomePage = () => {
+    const {darkMode} = useSelector(state => state.theme);
     return (
-        <div>
+        <div className={darkMode ? "dark-style" : "light-style"}>
            <Layout/>
         </div>
     );
 };
 
-export {HomePage}
+export {HomePage};

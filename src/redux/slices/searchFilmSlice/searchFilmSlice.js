@@ -1,11 +1,13 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {searchFilmService} from "../../../services/searchFilmService/searchFilmService";
+
+import {searchFilmService} from "../../../services";
 
 const initialState = {
     searchMovies: [],
     loading: null,
     error: null
-}
+};
+
 const getMoviesBySearch = createAsyncThunk(
     'searchFilmSlice/getMoviesBySearch',
     async ({search}, {rejectWithValue}) => {
@@ -15,7 +17,7 @@ const getMoviesBySearch = createAsyncThunk(
         } catch (e) {
             rejectWithValue(e)
         }
-    })
+    });
 
 const searchFilmSlice = createSlice(
     {
@@ -36,14 +38,15 @@ const searchFilmSlice = createSlice(
                 state.loading = false
 
             })
-    }
-)
+    });
 
-const {reducer: searchReducer} = searchFilmSlice
+const {reducer: searchReducer} = searchFilmSlice;
+
 const searchActions = {
     getMoviesBySearch,
-}
+};
+
 export {
     searchActions,
     searchReducer
-}
+};

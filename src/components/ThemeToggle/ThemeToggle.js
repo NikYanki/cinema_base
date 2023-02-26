@@ -1,6 +1,7 @@
+import "./ThemeToggle.css";
+
 import {useDispatch, useSelector} from "react-redux";
 
-import './ThemeToggle.css';
 import {changeTheme} from "../../redux/slices";
 
 const ThemeToggle = () => {
