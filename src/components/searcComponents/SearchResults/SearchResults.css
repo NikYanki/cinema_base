@@ -1,0 +1,14 @@
+.SearchResultsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.SearchResultsContainer a{
+    text-decoration: none;
+    font-family: Copperplate,Copperplate Gothic Light,fantasy;
+    font-size: 20px;
+
+}
+.SearchResultsContainer a:hover{
+    color: red;
+}

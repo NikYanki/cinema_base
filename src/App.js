@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import"./App.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {Layout} from "./components/Layout/Layout";
+import {Navigate, Route, Routes} from "react-router-dom";
+import {HomePage} from "./pages/HomePage/HomePage";
+import {MovieDetailsPage} from "./pages/MovieDetailsPage/MovieDetailsPage";
+import {NotFoundPage} from "./pages/NotFoundPage/NotFoundPage";
 
-export default App;
+const App = () => {
+
+    return (
+        <Routes>
+            <Route path={'/'} element={<Layout/>}>
+                <Route index element={<Navigate to={"home"}/>}/>
+                <Route path={'home'} element={<HomePage/>}/>
+            </Route>
+            <Route path={'movies/:id'} element={<MovieDetailsPage/>}/>
+            <Route path={'*'} element={<NotFoundPage/>}/>
+        </Routes>
+    );
+};
+export {App}
+
+

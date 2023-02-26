@@ -1,0 +1,25 @@
+.movieCardContainer {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+
+}
+
+.movieCardContainer img {
+    width: 170px;
+    border-radius: 3px;
+}
+
+.movieCardContainer a {
+    margin: 0;
+    font-size: 19px;
+    font-family: "Copperplate", "Courier New", monospace;
+    text-decoration: none;
+    /*color: springgreen;*/
+
+}

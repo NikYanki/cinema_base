@@ -1,0 +1,25 @@
+.headerContainer{
+    background: rgba(39, 31, 123, 0.42);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+.headerContainer img {
+    height: 100px;
+    margin: 10px;
+}
+.barAndToggle{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    row-gap: 20px;
+    width: 100%;
+}
+.barContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
