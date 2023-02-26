@@ -22,3 +22,6 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
+.barContainer button{
+    background: cornflowerblue;
+}
